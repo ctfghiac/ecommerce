@@ -1,11 +1,11 @@
-resource "random_string" "random" {
+resource "random_string" "rand" {
   length  = 5
   special = false
   upper   = false
 }
 
 locals {
-  policy_name = "allow-manage-stack-${random_string.random.result}"
+  policy_name = "allow-manage-stack-${random_string.rand.result}"
 }
 
 
